@@ -29,9 +29,9 @@ namespace Student_Manager_System_FIT.UTEHY
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            GenerationGUI generationGUI = new GenerationGUI();
+            LoadingGUI loadingGUI = new LoadingGUI();
             this.Hide();
-            generationGUI.Show();
+            loadingGUI.Show();
         }
     }
 }

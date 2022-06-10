@@ -16,7 +16,7 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginGUI());
+            Application.Run(new DashboardGUI());
         }
     }
 }
