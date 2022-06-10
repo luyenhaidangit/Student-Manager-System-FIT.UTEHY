@@ -1,0 +1,6 @@
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\bin\Debug\DTO.dll
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\bin\Debug\DTO.pdb
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\obj\Debug\DTO.dll
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\DTO\obj\Debug\DTO.pdb
