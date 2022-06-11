@@ -33,11 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,13 +53,32 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DashboardGUI1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardGUI1.Designer.cs">
+      <DependentUpon>DashboardGUI1.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashboardGUI.Designer.cs">
       <DependentUpon>DashboardGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGenerationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGenerationGUI.Designer.cs">
+      <DependentUpon>AddGenerationGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverviewGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverviewGUI.Designer.cs">
+      <DependentUpon>OverviewGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadingGUI.cs">
       <SubType>Form</SubType>
@@ -75,8 +100,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddGenerationGUI.resx">
+      <DependentUpon>AddGenerationGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardGUI1.resx">
+      <DependentUpon>DashboardGUI1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardGUI.resx">
       <DependentUpon>DashboardGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverviewGUI.resx">
+      <DependentUpon>OverviewGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerationGUI.resx">
       <DependentUpon>GenerationGUI.cs</DependentUpon>

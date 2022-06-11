@@ -14,7 +14,7 @@ namespace DAO
 
         public DataTable GetData()
         {
-            string sql = "select * from tbNhanVien";
+            string sql = "select * from Generation";
             return connect.GetData(sql);
         }
 
@@ -34,6 +34,22 @@ namespace DAO
         {
             string sql = "Delete from GENERATION WHERE ID = '" + id.Trim() + "'";
             RunSQL(sql);
+        }
+
+        public string AutoID()
+        {
+            DataTable tb = GetData();
+            List<int> listID = new List<int>();
+            string s = "";
+            foreach(DataRow dr in tb.Rows)
+            {
+                s = dr["Id"].ToString();
+                listID.Add(int.Parse(s));
+            }
+            int max = listID.Max();
+            int id = listID.Count > 0 ? max + 1 : 1160;
+            string ID = id.ToString();
+            return ID;
         }
     }
 }

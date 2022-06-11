@@ -25,8 +25,8 @@ namespace Student_Manager_System_FIT.UTEHY
             if (guna2CircleProgressBar1.Value == 10)
             {
                 timer1.Stop();
-                GenerationGUI generationGUI = new GenerationGUI();
-                generationGUI.Show();
+                DashboardGUI1 dashboardGUI = new DashboardGUI1();
+                dashboardGUI.Show();
                 this.Hide();
             }
         }

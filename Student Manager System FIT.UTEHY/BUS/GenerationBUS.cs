@@ -32,5 +32,10 @@ namespace BUS
         {
             GenerationDAO.Delete(id);
         }
+
+        public string AutoID()
+        {
+            return GenerationDAO.AutoID();
+        }
     }
 }

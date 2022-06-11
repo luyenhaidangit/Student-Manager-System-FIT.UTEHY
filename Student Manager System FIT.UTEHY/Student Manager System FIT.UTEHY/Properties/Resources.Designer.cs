@@ -133,6 +133,16 @@ namespace Student_Manager_System_FIT.UTEHY.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_fit1 {
+            get {
+                object obj = ResourceManager.GetObject("logo-fit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_utehy {
             get {
                 object obj = ResourceManager.GetObject("logo-utehy", resourceCulture);

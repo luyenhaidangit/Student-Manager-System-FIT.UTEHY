@@ -16,5 +16,61 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             InitializeComponent();
         }
+
+        private void ContainerForm(object form)
+        {
+            if (panelContainer.Controls.Count > 0)
+            {
+                panelContainer.Controls.Clear();
+            }
+            Form fm = form as Form;
+            fm.TopLevel = false;
+            fm.FormBorderStyle = FormBorderStyle.None;
+            fm.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(fm);
+            panelContainer.Tag = fm;
+            fm.Show();
+        }
+
+        //private void DashboardGUI_Load(object sender, EventArgs e)
+        //{
+        //    this.Text = "ok";
+        //    nameFormActiveLbl.Text = "Tổng quan";
+        //    ContainerForm(new OverviewGUI());
+        //}
+        //private void overviewLinkBtn_Click(object sender, EventArgs e)
+        //{
+        //    this.Text = "Tổng quan";
+        //    nameFormActiveLbl.Text = "Tổng quan";
+        //    ContainerForm(new OverviewGUI());
+        //}
+
+        //private void generationLinkBtn_Click(object sender, EventArgs e)
+        //{
+        //    this.Text = "Quản lý chuyên ngành đào tạo";
+        //    nameFormActiveLbl.Text = "Quản lý chuyên ngành đào tạo";
+        //    ContainerForm(new GenerationGUI());
+        //}
+
+        private void DashboardGUI_Load(object sender, EventArgs e)
+        {
+            this.Text = "Tổng quan";
+            nameFormActiveLbl.Text = "Tổng quan";
+            ContainerForm(new OverviewGUI());
+        }
+
+        private void overviewLinkBtn_Click(object sender, EventArgs e)
+        {
+            this.Text = "Tổng quan";
+            nameFormActiveLbl.Text = "Tổng quan";
+            ContainerForm(new OverviewGUI());
+        }
+
+        private void generationLinkBtn_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý chuyên ngành đào tạo";
+            nameFormActiveLbl.Text = "Quản lý chuyên ngành đào tạo";
+            ContainerForm(new GenerationGUI());
+        }
     }
 }

@@ -89,7 +89,7 @@
             this.Controls.Add(this.guna2CircleProgressBar1);
             this.Name = "LoadingGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Loading";
             this.Load += new System.EventHandler(this.LoadingGUI_Load);
             this.ResumeLayout(false);
 
