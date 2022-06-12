@@ -22,6 +22,3 @@ C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager Sys
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.DashboardGUI.resources
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\bin\Debug\FontAwesome.Sharp.dll
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.OverviewGUI.resources
-C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.DashboardGUI1.resources
-C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.AddGenerationGUI.resources
-C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.EditGenerationGUI.resources

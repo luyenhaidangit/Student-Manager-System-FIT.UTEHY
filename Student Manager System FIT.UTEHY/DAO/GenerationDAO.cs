@@ -26,7 +26,7 @@ namespace DAO
 
         public void Edit(Generation obj)
         {
-            string sql = string.Format("update GENERATION set NAME = N'{0}', DESC = N'{1}'", obj.Name, obj.Desc);
+            string sql = string.Format("update GENERATION set NAME = N'{0}', DES = N'{1}' WHERE ID=N'{2}'", obj.Name, obj.Desc,obj.Id);
             RunSQL(sql);
         }
 

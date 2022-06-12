@@ -33,37 +33,59 @@ namespace Student_Manager_System_FIT.UTEHY
             dgvGeneration.AllowUserToResizeRows = false;
         }
 
-        public void ActiveBtn(Control x)
+        public void ResetInput()
         {
-            foreach (Control c in panelBottom.Controls)
-            {
-                c.Enabled = false;
-            }
-            x.Enabled = true;
-
+            txtID.Text = "";
+            txtName.Text = "";
+            txtDesc.Text = "";
+            btnSubmit.Enabled = false;
         }
 
-        public void ActiveAllBtn()
+        public void DefaultStatus()
         {
-            foreach (Control c in panelBottom.Controls)
-            {
-                c.Enabled = true;
-            }
+            lblDelete.Text = "";
+            lblErName.Text = "";
+            lblStatus.Text = "Default";
+            btnAdd.Enabled = true;
+            editBtn.Enabled = true;
+            deleteBtn.Enabled = true;
+            numberGeneration.Text = dgvGeneration.Rows.Count.ToString();
         }
 
+        public void AddStatus()
+        {
+            lblStatus.Text = "Add";
+            editBtn.Enabled = false;
+            deleteBtn.Enabled = false;
+        }
 
+        public void EditStatus()
+        {
+            lblStatus.Text = "Edit";
+            btnAdd.Enabled = false;
+            deleteBtn.Enabled= false;
+        }
+
+        public void DeleteStatus()
+        {
+            lblStatus.Text = "Delete";
+            btnAdd.Enabled = false;
+            editBtn.Enabled = false;
+        }
 
         private void GenerationGUI_Load(object sender, EventArgs e)
         {
+            ResetInput();
             LoadDataGridView();
             numberGeneration.Text = dgvGeneration.Rows.Count.ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddGenerationGUI addForm = new AddGenerationGUI();
-            addForm.Show() ;
-            this.ActiveAllBtn();
+            AddStatus();
+            txtID.Text = generationBUS.AutoID();
+            txtName.Focus();
+            btnSubmit.Enabled = true;
         }
 
         private void dgvGeneration_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -72,17 +94,78 @@ namespace Student_Manager_System_FIT.UTEHY
             label1.Text = y.ToString();
         }
 
-        private void btnSkip_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void editBtn_Click_1(object sender, EventArgs e)
         {
-            EditGenerationGUI x = new EditGenerationGUI();
-            x.GetValue = label1.Text;
-            x.Show();
-            ActiveBtn(editBtn);
+            btnSubmit.Enabled = true;
+            EditStatus();
+            DataTable dt = generationBUS.GetData();
+            DataRow dr = dt.Rows[int.Parse(label1.Text)];
+            txtID.Text = dr["ID"].ToString();
+            txtName.Text = dr["Name"].ToString();
+            txtDesc.Text = dr["Des"].ToString();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            btnSubmit.Enabled = true;
+            DeleteStatus();
+            DataTable dt = generationBUS.GetData();
+            DataRow dr = dt.Rows[int.Parse(label1.Text)];
+            txtID.Text = dr["ID"].ToString();
+            txtName.Text = dr["Name"].ToString();
+            txtDesc.Text = dr["Des"].ToString();
+            lblDelete.Text = "Bạn có chắc muốn xóa?";
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            DefaultStatus();
+            ResetInput();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if(lblStatus.Text == "Delete")
+            {
+                generationBUS.Delete(txtID.Text);
+                LoadDataGridView();
+                DefaultStatus();
+                ResetInput();
+            }
+            else
+            {
+                if (txtName.Text.Trim() == "")
+                {
+                    lblErName.Text = "Tên chuyên ngành không được để trống, thử lại!";
+                    txtName.Focus();
+                }
+                else
+                {
+                    if (lblStatus.Text == "Add")
+                    {
+                        Generation ge = new Generation();
+                        ge.Id = txtID.Text;
+                        ge.Name = txtName.Text.Trim();
+                        ge.Desc = txtDesc.Text.Trim();
+                        generationBUS.Add(ge);
+                        LoadDataGridView();
+                        DefaultStatus();
+                        ResetInput();
+                    }
+                    else if (lblStatus.Text == "Edit")
+                    {
+                        Generation ge = new Generation();
+                        ge.Id = txtID.Text;
+                        ge.Name = txtName.Text.Trim();
+                        ge.Desc = txtDesc.Text.Trim();
+                        generationBUS.Edit(ge);
+                        LoadDataGridView();
+                        DefaultStatus();
+                        ResetInput();
+                    }
+
+                }
+            }
         }
     }
 }
