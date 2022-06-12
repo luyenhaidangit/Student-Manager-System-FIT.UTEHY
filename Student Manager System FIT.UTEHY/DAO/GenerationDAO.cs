@@ -20,7 +20,7 @@ namespace DAO
 
         public void Add(Generation obj)
         {
-            string sql = string.Format("INSERT INTO GENERATION VALUES ('{0}',N'{1}',N'{2}','{3}',N'{4}','{5}',N'{6}')", obj.Id,obj.Name,obj.Desc);
+            string sql = string.Format("INSERT INTO GENERATION VALUES ('{0}',N'{1}',N'{2}')", obj.Id,obj.Name,obj.Desc);
             RunSQL(sql);
         }
 
@@ -50,6 +50,22 @@ namespace DAO
             int id = listID.Count > 0 ? max + 1 : 1160;
             string ID = id.ToString();
             return ID;
+        } 
+
+        public Generation GetObj(int index)
+        {
+            DataTable tb = GetData();
+            Generation ge = new Generation();
+            foreach (DataRow dr in tb.Rows)
+            {
+                if(tb.Rows.Count == index)
+                {
+                    ge.Id = dr["Id"].ToString();
+                    ge.Name = dr["Name"].ToString();
+                    ge.Desc = dr["Description"].ToString();
+                }
+            }
+            return ge;
         }
     }
 }

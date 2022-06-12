@@ -74,6 +74,13 @@
     <Compile Include="AddGenerationGUI.Designer.cs">
       <DependentUpon>AddGenerationGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditGenerationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGenerationGUI.Designer.cs">
+      <DependentUpon>EditGenerationGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormService.cs" />
     <Compile Include="OverviewGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student_Manager_System_FIT_UTEHYDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_Manager_System_FIT_UTEHYDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddGenerationGUI.resx">
       <DependentUpon>AddGenerationGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardGUI.resx">
       <DependentUpon>DashboardGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGenerationGUI.resx">
+      <DependentUpon>EditGenerationGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OverviewGUI.resx">
       <DependentUpon>OverviewGUI.cs</DependentUpon>
@@ -141,6 +156,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Student_Manager_System_FIT_UTEHYDataSet.xsc">
+      <DependentUpon>Student_Manager_System_FIT_UTEHYDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Student_Manager_System_FIT_UTEHYDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_Manager_System_FIT_UTEHYDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_Manager_System_FIT_UTEHYDataSet.xss">
+      <DependentUpon>Student_Manager_System_FIT_UTEHYDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

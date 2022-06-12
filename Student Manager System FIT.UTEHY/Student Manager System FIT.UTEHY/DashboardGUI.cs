@@ -32,26 +32,6 @@ namespace Student_Manager_System_FIT.UTEHY
             fm.Show();
         }
 
-        //private void DashboardGUI_Load(object sender, EventArgs e)
-        //{
-        //    this.Text = "ok";
-        //    nameFormActiveLbl.Text = "Tổng quan";
-        //    ContainerForm(new OverviewGUI());
-        //}
-        //private void overviewLinkBtn_Click(object sender, EventArgs e)
-        //{
-        //    this.Text = "Tổng quan";
-        //    nameFormActiveLbl.Text = "Tổng quan";
-        //    ContainerForm(new OverviewGUI());
-        //}
-
-        //private void generationLinkBtn_Click(object sender, EventArgs e)
-        //{
-        //    this.Text = "Quản lý chuyên ngành đào tạo";
-        //    nameFormActiveLbl.Text = "Quản lý chuyên ngành đào tạo";
-        //    ContainerForm(new GenerationGUI());
-        //}
-
         private void DashboardGUI_Load(object sender, EventArgs e)
         {
             this.Text = "Tổng quan";
@@ -70,7 +50,16 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             this.Text = "Quản lý chuyên ngành đào tạo";
             nameFormActiveLbl.Text = "Quản lý chuyên ngành đào tạo";
-            ContainerForm(new GenerationGUI());
+            var form = new GenerationGUI();
+            if (!FormService.Instance.CreatedForms.ContainsKey(typeof(GenerationGUI)))
+            {
+                FormService.Instance.CreatedForms.Add(form.GetType(), form);
+            }
+            else
+            {
+                FormService.Instance.CreatedForms[typeof(GenerationGUI)] = form;
+            }
+            ContainerForm(form);
         }
     }
 }

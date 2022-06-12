@@ -37,5 +37,10 @@ namespace BUS
         {
             return GenerationDAO.AutoID();
         }
+
+        public Generation GetObj(int index)
+        {
+            return GenerationDAO.GetObj(index);
+        }
     }
 }
