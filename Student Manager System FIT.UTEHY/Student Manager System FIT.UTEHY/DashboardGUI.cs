@@ -61,5 +61,55 @@ namespace Student_Manager_System_FIT.UTEHY
             }
             ContainerForm(form);
         }
+
+        private void classLinkBtn_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý lớp học";
+            nameFormActiveLbl.Text = "Quản lý lớp học";
+            var form = new ClassGUI();
+            ContainerForm(form);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý sinh viên";
+            nameFormActiveLbl.Text = "Quản lý sinh viên";
+            var form = new StudentGUI();
+            ContainerForm(form);
+        }
+
+        private void teacherLinkBtn_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý giáo viên";
+            nameFormActiveLbl.Text = "Quản lý giáo viên";
+            var form = new TeacherGUI();
+            ContainerForm(form);
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý môn học";
+            nameFormActiveLbl.Text = "Quản lý môn học";
+            var form = new SubjectGUI();
+            ContainerForm(form);
+        }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scheduleLinkBtn_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý lịch học";
+            nameFormActiveLbl.Text = "Quản lý lịch học";
+            var form = new ScheduleGUI();
+            ContainerForm(form);
+        }
     }
 }

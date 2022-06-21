@@ -36,6 +36,12 @@ namespace DAO
             RunSQL(sql);
         }
 
+        public DataTable Search(string key)
+        {
+            string sql = "select g.ID,g.Name,g.Des FROM generation g WHERE g.ID like N'%+"+key+"%' OR g.Name like N'%"+key+"%' OR g.Des Like N'%"+key+"%'";
+            return connect.GetData(sql);
+        }
+
         public string AutoID()
         {
             DataTable tb = GetData();
@@ -46,8 +52,8 @@ namespace DAO
                 s = dr["Id"].ToString();
                 listID.Add(int.Parse(s));
             }
-            int max = listID.Max();
-            int id = listID.Count > 0 ? max + 1 : 1160;
+            int max = listID.Count>0?listID.Max():1159;
+            int id = max+1;
             string ID = id.ToString();
             return ID;
         } 

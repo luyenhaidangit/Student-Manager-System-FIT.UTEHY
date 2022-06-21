@@ -49,7 +49,7 @@ namespace Student_Manager_System_FIT.UTEHY
             btnAdd.Enabled = true;
             editBtn.Enabled = true;
             deleteBtn.Enabled = true;
-            numberGeneration.Text = dgvGeneration.Rows.Count.ToString();
+            numberGeneration.Text = generationBUS.GetData().Rows.Count.ToString();
         }
 
         public void AddStatus()
@@ -77,7 +77,7 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             ResetInput();
             LoadDataGridView();
-            numberGeneration.Text = dgvGeneration.Rows.Count.ToString();
+            numberGeneration.Text = generationBUS.GetData().Rows.Count.ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -98,27 +98,26 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             btnSubmit.Enabled = true;
             EditStatus();
-            DataTable dt = generationBUS.GetData();
-            DataRow dr = dt.Rows[int.Parse(label1.Text)];
-            txtID.Text = dr["ID"].ToString();
-            txtName.Text = dr["Name"].ToString();
-            txtDesc.Text = dr["Des"].ToString();
+            int index = int.Parse(label1.Text);
+            txtID.Text = dgvGeneration[0, index].Value.ToString();
+            txtName.Text = dgvGeneration[1, index].Value.ToString();
+            txtDesc.Text = dgvGeneration[2, index].Value.ToString();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             btnSubmit.Enabled = true;
             DeleteStatus();
-            DataTable dt = generationBUS.GetData();
-            DataRow dr = dt.Rows[int.Parse(label1.Text)];
-            txtID.Text = dr["ID"].ToString();
-            txtName.Text = dr["Name"].ToString();
-            txtDesc.Text = dr["Des"].ToString();
+            int index = int.Parse(label1.Text);
+            txtID.Text = dgvGeneration[0, index].Value.ToString();
+            txtName.Text = dgvGeneration[1, index].Value.ToString();
+            txtDesc.Text = dgvGeneration[2, index].Value.ToString();
             lblDelete.Text = "Bạn có chắc muốn xóa?";
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            guna2TextBox1.Text = "";
             DefaultStatus();
             ResetInput();
         }
@@ -166,6 +165,19 @@ namespace Student_Manager_System_FIT.UTEHY
 
                 }
             }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string key = guna2TextBox1.Text;
+            dgvGeneration.DataSource = new List<Generation>();
+            dgvGeneration.DataSource = generationBUS.Search(key);
+            dgvGeneration.Columns[0].HeaderText = "Mã chuyên ngành";
+            dgvGeneration.Columns[1].HeaderText = "Tên chuyên ngành";
+            dgvGeneration.Columns[2].HeaderText = "Mô tả";
+            dgvGeneration.ReadOnly = true;
+            dgvGeneration.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvGeneration.AllowUserToResizeRows = false;
         }
     }
 }

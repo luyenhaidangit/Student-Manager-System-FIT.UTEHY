@@ -56,11 +56,42 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScheduleGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleGUI.Designer.cs">
+      <DependentUpon>ScheduleGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGUI.Designer.cs">
+      <DependentUpon>SubjectGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherGUI.Designer.cs">
+      <DependentUpon>TeacherGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
     <Compile Include="DashboardGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DashboardGUI.Designer.cs">
       <DependentUpon>DashboardGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassGUI.Designer.cs">
+      <DependentUpon>ClassGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGUI.Designer.cs">
+      <DependentUpon>StudentGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="FormService.cs" />
     <Compile Include="OverviewGUI.cs">
@@ -94,6 +125,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_Manager_System_FIT_UTEHYDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ClassGUI.resx">
+      <DependentUpon>ClassGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardGUI.resx">
       <DependentUpon>DashboardGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +147,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleGUI.resx">
+      <DependentUpon>ScheduleGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGUI.resx">
+      <DependentUpon>StudentGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGUI.resx">
+      <DependentUpon>SubjectGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherGUI.resx">
+      <DependentUpon>TeacherGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

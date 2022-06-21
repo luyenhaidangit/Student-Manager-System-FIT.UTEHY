@@ -33,6 +33,11 @@ namespace BUS
             GenerationDAO.Delete(id);
         }
 
+        public DataTable Search(string key)
+        {
+            return GenerationDAO.Search(key);
+        }
+
         public string AutoID()
         {
             return GenerationDAO.AutoID();
