@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserDAO.cs" />
+    <Compile Include="ScoresDAO.cs" />
     <Compile Include="ScheduleDAO.cs" />
     <Compile Include="SubjectDAO.cs" />
     <Compile Include="TeacherDAO.cs" />

@@ -27,3 +27,5 @@ C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager Sys
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.TeacherGUI.resources
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.SubjectGUI.resources
 C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.ScheduleGUI.resources
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.ScoresGUI.resources
+C:\luyenhaidangit.github.io\Student-Manager-System-FIT.UTEHY\Student Manager System FIT.UTEHY\Student Manager System FIT.UTEHY\obj\Debug\Student_Manager_System_FIT.UTEHY.UserGUI.resources

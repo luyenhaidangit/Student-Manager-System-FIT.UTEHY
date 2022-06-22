@@ -17,7 +17,7 @@ namespace Student_Manager_System_FIT.UTEHY
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardGUI());
+            Application.Run(new LoginGUI());
             //GenerationBUS x = new GenerationBUS();
             //x.AutoID();
         }

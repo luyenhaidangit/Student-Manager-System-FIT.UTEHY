@@ -101,7 +101,10 @@ namespace Student_Manager_System_FIT.UTEHY
 
         private void guna2Button11_Click(object sender, EventArgs e)
         {
-
+            this.Text = "Quản lý người dùng";
+            nameFormActiveLbl.Text = "Quản lý người dùng";
+            var form = new UserGUI();
+            ContainerForm(form);
         }
 
         private void scheduleLinkBtn_Click(object sender, EventArgs e)
@@ -109,6 +112,14 @@ namespace Student_Manager_System_FIT.UTEHY
             this.Text = "Quản lý lịch học";
             nameFormActiveLbl.Text = "Quản lý lịch học";
             var form = new ScheduleGUI();
+            ContainerForm(form);
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            this.Text = "Quản lý điểm số";
+            nameFormActiveLbl.Text = "Quản lý điểm số";
+            var form = new ScoresGUI();
             ContainerForm(form);
         }
     }

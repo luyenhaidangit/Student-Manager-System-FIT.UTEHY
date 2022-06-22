@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardGUI));
             this.panelLeft = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.nameFormActiveLbl = new System.Windows.Forms.Label();
-            this.label_val = new System.Windows.Forms.Label();
-            this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.subjectBtnLink = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
@@ -48,10 +43,15 @@
             this.generationLinkBtn = new Guna.UI2.WinForms.Guna2Button();
             this.overviewLinkBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.nameFormActiveLbl = new System.Windows.Forms.Label();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label_val = new System.Windows.Forms.Label();
+            this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.panelLeft.SuspendLayout();
-            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -77,64 +77,6 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(273, 793);
             this.panelLeft.TabIndex = 11;
-            // 
-            // panelTop
-            // 
-            this.panelTop.Controls.Add(this.nameFormActiveLbl);
-            this.panelTop.Controls.Add(this.guna2CircleButton2);
-            this.panelTop.Controls.Add(this.label_val);
-            this.panelTop.CustomBorderColor = System.Drawing.Color.Silver;
-            this.panelTop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(273, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1209, 65);
-            this.panelTop.TabIndex = 13;
-            // 
-            // nameFormActiveLbl
-            // 
-            this.nameFormActiveLbl.AutoSize = true;
-            this.nameFormActiveLbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameFormActiveLbl.Location = new System.Drawing.Point(34, 21);
-            this.nameFormActiveLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nameFormActiveLbl.Name = "nameFormActiveLbl";
-            this.nameFormActiveLbl.Size = new System.Drawing.Size(116, 29);
-            this.nameFormActiveLbl.TabIndex = 7;
-            this.nameFormActiveLbl.Text = "Tổng quan";
-            // 
-            // label_val
-            // 
-            this.label_val.AutoSize = true;
-            this.label_val.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
-            this.label_val.Location = new System.Drawing.Point(95, 17);
-            this.label_val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_val.Name = "label_val";
-            this.label_val.Size = new System.Drawing.Size(0, 25);
-            this.label_val.TabIndex = 5;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(273, 65);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(4);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1209, 728);
-            this.panelContainer.TabIndex = 14;
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton2.Image")));
-            this.guna2CircleButton2.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2CircleButton2.Location = new System.Drawing.Point(1137, 14);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(40, 37);
-            this.guna2CircleButton2.TabIndex = 6;
             // 
             // subjectBtnLink
             // 
@@ -295,6 +237,7 @@
             this.guna2Button6.TabIndex = 6;
             this.guna2Button6.Text = "Điểm Số";
             this.guna2Button6.TextOffset = new System.Drawing.Point(8, 0);
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // scheduleLinkBtn
             // 
@@ -433,6 +376,64 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // panelTop
+            // 
+            this.panelTop.Controls.Add(this.nameFormActiveLbl);
+            this.panelTop.Controls.Add(this.guna2CircleButton2);
+            this.panelTop.Controls.Add(this.label_val);
+            this.panelTop.CustomBorderColor = System.Drawing.Color.Silver;
+            this.panelTop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(273, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1209, 65);
+            this.panelTop.TabIndex = 13;
+            // 
+            // nameFormActiveLbl
+            // 
+            this.nameFormActiveLbl.AutoSize = true;
+            this.nameFormActiveLbl.Font = new System.Drawing.Font("Franklin Gothic Medium", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameFormActiveLbl.Location = new System.Drawing.Point(34, 21);
+            this.nameFormActiveLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameFormActiveLbl.Name = "nameFormActiveLbl";
+            this.nameFormActiveLbl.Size = new System.Drawing.Size(116, 29);
+            this.nameFormActiveLbl.TabIndex = 7;
+            this.nameFormActiveLbl.Text = "Tổng quan";
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(68)))), ((int)(((byte)(234)))));
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton2.Image")));
+            this.guna2CircleButton2.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(1137, 14);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(40, 37);
+            this.guna2CircleButton2.TabIndex = 6;
+            // 
+            // label_val
+            // 
+            this.label_val.AutoSize = true;
+            this.label_val.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.label_val.Location = new System.Drawing.Point(95, 17);
+            this.label_val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_val.Name = "label_val";
+            this.label_val.Size = new System.Drawing.Size(0, 25);
+            this.label_val.TabIndex = 5;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(273, 65);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1209, 728);
+            this.panelContainer.TabIndex = 14;
+            // 
             // DashboardGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,10 +448,10 @@
             this.Text = "Tổng quan";
             this.Load += new System.EventHandler(this.DashboardGUI_Load);
             this.panelLeft.ResumeLayout(false);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
         }

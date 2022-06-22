@@ -56,6 +56,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserGUI.Designer.cs">
+      <DependentUpon>UserGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScoresGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoresGUI.Designer.cs">
+      <DependentUpon>ScoresGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,9 @@
     <EmbeddedResource Include="ScheduleGUI.resx">
       <DependentUpon>ScheduleGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScoresGUI.resx">
+      <DependentUpon>ScoresGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentGUI.resx">
       <DependentUpon>StudentGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherGUI.resx">
       <DependentUpon>TeacherGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserGUI.resx">
+      <DependentUpon>UserGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
